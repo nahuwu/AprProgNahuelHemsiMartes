@@ -18,6 +18,23 @@ if (jugar) {
   iniciarJuego();
 }
 
+
+//Muestra pantalla acerca de
+function mostrarAcercaDe()
+{
+	document.querySelector('#pantalla-inicio').classList.add('d-none');
+	document.querySelector('#pantalla-juego').classList.add('d-none');
+	document.querySelector('#pantalla-resultado').classList.add('d-none');
+	document.querySelector('#pantalla-acerca_de').classList.remove('d-none');
+}
+
+
+// Muestra pantalla de acerca de si en el link se indica el anchor #acerca_de
+let acerca_de = (window.location.hash == '#acerca_de');
+if (acerca_de) {
+  mostrarAcercaDe();
+}
+
 /********FUNCIONES AUXILIARES***************/
 // Retorna un número aleatorio >= 0 y < n
 function randomN (n) {

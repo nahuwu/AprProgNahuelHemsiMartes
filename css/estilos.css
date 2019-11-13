@@ -265,6 +265,11 @@ main
 	font-weight:bold;
 }
 
+.trivia-opcion label, .trivia-opcion input
+{
+	cursor:pointer;
+}
+
 .trivia-opcion.correcta
 {
 	color:white;
