@@ -1,6 +1,6 @@
 
-let indice_pregunta_actual=5;
-let total_puntos=2;
+let indice_pregunta_actual;
+let total_puntos;
 let resultadomsg="";
 const nombre_alumno="Nahuel";
 const maximo_preguntas_por_jugada=1;
@@ -24,8 +24,12 @@ function obtenerSiguientePregunta() {
 }
 
 function mostrarPregunta(pregunta){
-	console.log(pregunta+") ¿Pregunta?")
+	document.querySelector("#pregunta-numero").textContent = (indice_pregunta_actual+1);
+	document.querySelector("#pregunta-texto").textContent = pregunta.texto_pregunta; // preguntar
+	document.querySelector("#pregunta-imagen").src = pregunta.imagen_src
 }
+
+
 console.log(resultadomsg+" "+resultadomsg.toUpperCase());
 console.log("La longitud del mensaje es: "+resultadomsg.length);
 console.log("El total de puntos son: "+total_puntos);
